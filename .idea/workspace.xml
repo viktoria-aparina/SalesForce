@@ -4,13 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62a0c1f2-df4f-4243-8052-e237f01f3921" name="Changes" comment="" />
+    <list default="true" id="62a0c1f2-df4f-4243-8052-e237f01f3921" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewAccountModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewContactModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/utils/PropertiesLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/DropDownInAccountModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/DropDownInContactModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputInAccountModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputInContactModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputWithHintsAccountModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputWithHintsInContactModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/login.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/ContactsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2C7kcRx44XoIsHnPwT17S1LdBuh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,9 +64,56 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/TMS/testershmester",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.ContactsTest.createContactsTest">
+    <configuration name="ContactsTest.createContactsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SalesForce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.teachmeskills.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.teachmeskills" />
+      <option name="MAIN_CLASS_NAME" value="by.teachmeskills.ContactsTest" />
+      <option name="METHOD_NAME" value="createContactsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.createAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SalesForce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.teachmeskills.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.teachmeskills" />
+      <option name="MAIN_CLASS_NAME" value="by.teachmeskills.LoginTest" />
+      <option name="METHOD_NAME" value="createAccountTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ContactsTest.createContactsTest" />
+        <item itemvalue="TestNG.LoginTest.createAccountTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,6 +123,33 @@
       <option name="presentableId" value="Default" />
       <updated>1658161095983</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1658161303267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658161303267</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
