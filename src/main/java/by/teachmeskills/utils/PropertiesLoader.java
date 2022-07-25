@@ -20,9 +20,7 @@ public class PropertiesLoader {
     }
 
     public static Properties loadProperties() {
-        Properties properties = loadProperties("login.properties");
-        String user = properties.getProperty("user");
-        String password = properties.getProperty("password");
+        Properties properties = loadProperties("config.properties");
         return properties;
     }
 }

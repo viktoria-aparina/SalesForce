@@ -1,17 +1,15 @@
 package by.teachmeskills;
 
-import by.teachmeskills.pages.AccountsPage;
-import by.teachmeskills.pages.HomePage;
-import by.teachmeskills.pages.LoginPage;
-import by.teachmeskills.pages.NewAccountModal;
-import com.github.javafaker.Faker;
+import by.teachmeskills.dto.Account;
+import by.teachmeskills.pages.*;
+import by.teachmeskills.providers.Provider;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class LoginTest extends BaseTest {
@@ -22,34 +20,35 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void createAccountTest() {
-        new LoginPage(driver).open().
-                             fillInUserName().
-                             fillInPassword().
-                             submitForm();
+        new LoginPage(driver).open()
+                             .fillInUserName()
+                             .fillInPassword()
+                             .submitForm();
         assertTrue(new HomePage(driver).getQuarterlyPerformance().isDisplayed(), "You are not on Home Page");
 
         new AccountsPage(driver).open().
                                 clickNewButton();
-        assertTrue(new NewAccountModal(driver).getTitleNewAccount().isDisplayed(), "The window \"New Account Modal\" didn't appear");
+        assertTrue(new NewAccountModal(driver).getTitleNewAccount().isDisplayed(),
+                   "The window \"New Account Modal\" didn't appear");
 
-        Faker faker = new Faker();
+        Account account = new Provider().getAccount();
 
-        NewAccountModal accountModal = new NewAccountModal(driver).createNewAccount(faker.company().name(),
-                                                                                    faker.internet().url(),
-                                                                                    faker.phoneNumber().phoneNumber());
+        new NewAccountModal(driver).createNewAccount(account).saveAccount();
+        assertTrue(new AccountsPage(driver).notificationMessage().isDisplayed(), "The account wasn't created");
 
-        accountModal.saveAccount();
-        assertTrue(new AccountsPage(driver).notificationMessage().isDisplayed());
+        Account actualAccount = new AccountDetailsPage(driver).clickDetailsButton()
+                                                              .getAccount();
+        assertEquals(actualAccount.getAccountName(), account.getAccountName(), "Names are different");
+        assertEquals(actualAccount.getPhone(), account.getPhone(), "Phones are different");
+        assertEquals(actualAccount.getWebsite(), account.getWebsite(), "Websites are different");
+        assertEquals(actualAccount.getIndustry(), account.getIndustry(), "Industries are different");
+        assertEquals(actualAccount.getType(), account.getType(), "Types sre different");
     }
 
-    @AfterMethod(alwaysRun = true)
-
+    @AfterMethod
     public void deleteAccount() {
-        WebElement deleteButton;
-        WebElement deleteButtonInNotification = driver.findElement(NOTIFICATION_MESSAGE);
         driver.findElement(DELETE_BUTTON_LOCATOR).click();
         driver.findElement(DELETE_BUTTON_IN_NOTIFICATION).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(NOTIFICATION_MESSAGE));
-        Assert.assertTrue(deleteButtonInNotification.isDisplayed());
+        Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(NOTIFICATION_MESSAGE)).isDisplayed());
     }
 }
