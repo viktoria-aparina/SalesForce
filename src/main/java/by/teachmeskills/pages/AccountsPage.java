@@ -1,5 +1,6 @@
 package by.teachmeskills.pages;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+@Log4j2
 public class AccountsPage extends BasePage {
 
     @FindBy(xpath = "//div[@title='New']")
@@ -30,6 +32,7 @@ public class AccountsPage extends BasePage {
             wait.until(ExpectedConditions.visibilityOfElementLocated((ACCOUNTS_LOCATOR)));
             return true;
         } catch (TimeoutException exception) {
+            log.error("The page {} wasn't opened, because of {}", "Account Page", exception.getMessage());
             return false;
         }
     }
@@ -48,6 +51,7 @@ public class AccountsPage extends BasePage {
 
     public WebElement notificationMessage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(NOTIFICATION_LOCATOR));
+        log.info("The notification message was displayed");
         return notification;
     }
 }

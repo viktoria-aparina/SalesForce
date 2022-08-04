@@ -16,4 +16,7 @@ public class ContactDetail {
     public String getPhoneAndEmailDetail() {
         return driver.findElement(By.xpath(String.format("//span[text()='%s']/ancestor::div[contains(@class, 'slds-form-element')]//a", label))).getText();
     }
+    public String getName() {
+        return driver.findElement(By.xpath(String.format("//span[text()='%s']/ancestor::div[contains(@class, 'slds-form')]//lightning-formatted-name", label))).getText();
+    }
 }

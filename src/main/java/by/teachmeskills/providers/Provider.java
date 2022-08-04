@@ -8,27 +8,25 @@ public class Provider {
 
     Faker faker = new Faker();
     String accountName = faker.company().name();
-    String contactName = faker.company().name();
 
     public Account getAccount() {
-        Account account = new Account(accountName);
-        account.setAccountName(accountName);
-        account.setWebsite(faker.internet().url());
-        account.setPhone(faker.phoneNumber().phoneNumber());
-        account.setType("Competitor");
-        account.setIndustry("Healthcare");
+        Account account = Account.builder()
+                                 .accountName(accountName)
+                                 .website(faker.internet().url())
+                                 .phone(faker.phoneNumber().phoneNumber())
+                                 .type("Competitor")
+                                 .industry("Healthcare").build();
         return account;
     }
 
-    public Contact getContact() {
-        Contact contact = new Contact(contactName);
-        contact.setFirstName(faker.team().name());
-        contact.setLastName(faker.company().name());
-        contact.setEmail(faker.internet().emailAddress());
-        contact.setPhone(faker.phoneNumber().phoneNumber());
-        contact.setSalutation("Dr.");
-//        contact.getContactName();
-//        contact.getAccountName();
+    public Contact getContact(Account account) {
+        Contact contact = Contact.builder()
+                                 .firstName(faker.team().name())
+                                 .lastName(faker.company().name())
+                                 .email(faker.internet().emailAddress())
+                                 .phone(faker.phoneNumber().phoneNumber())
+                                 .salutation("Dr.")
+                                 .account(account).build();
         return contact;
     }
 }

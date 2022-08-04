@@ -5,7 +5,6 @@ import by.teachmeskills.pages.*;
 import by.teachmeskills.providers.Provider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -37,18 +36,14 @@ public class LoginTest extends BaseTest {
         assertTrue(new AccountsPage(driver).notificationMessage().isDisplayed(), "The account wasn't created");
 
         Account actualAccount = new AccountDetailsPage(driver).clickDetailsButton()
-                                                              .getAccount();
-        assertEquals(actualAccount.getAccountName(), account.getAccountName(), "Names are different");
-        assertEquals(actualAccount.getPhone(), account.getPhone(), "Phones are different");
-        assertEquals(actualAccount.getWebsite(), account.getWebsite(), "Websites are different");
-        assertEquals(actualAccount.getIndustry(), account.getIndustry(), "Industries are different");
-        assertEquals(actualAccount.getType(), account.getType(), "Types sre different");
+                                                              .getActualAccount();
+        assertEquals(account, actualAccount, "Accounts aren't the same");
     }
 
     @AfterMethod
     public void deleteAccount() {
         driver.findElement(DELETE_BUTTON_LOCATOR).click();
         driver.findElement(DELETE_BUTTON_IN_NOTIFICATION).click();
-        Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(NOTIFICATION_MESSAGE)).isDisplayed());
+        assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(NOTIFICATION_MESSAGE)).isDisplayed());
     }
 }

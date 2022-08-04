@@ -1,6 +1,7 @@
 package by.teachmeskills.pages;
 
 import by.teachmeskills.utils.PropertiesLoader;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Properties;
 
+@Log4j2
 public class LoginPage extends BasePage {
 
     private static final String USERNAME = "username";
@@ -37,6 +39,7 @@ public class LoginPage extends BasePage {
             wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("Login"))));
             return true;
         } catch (TimeoutException exception) {
+            log.error("The page {} wasn't opened, because of {}", "Login Page", exception.getMessage());
             return false;
         }
     }

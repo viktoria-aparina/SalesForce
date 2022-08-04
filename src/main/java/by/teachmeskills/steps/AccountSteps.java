@@ -3,9 +3,11 @@ package by.teachmeskills.steps;
 import by.teachmeskills.dto.Account;
 import by.teachmeskills.dto.Contact;
 import by.teachmeskills.pages.*;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+@Log4j2
 public class AccountSteps {
 
     WebDriver driver;
