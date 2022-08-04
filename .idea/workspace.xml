@@ -4,31 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62a0c1f2-df4f-4243-8052-e237f01f3921" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewAccountModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewContactModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/utils/PropertiesLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/DropDownInAccountModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/DropDownInContactModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputInAccountModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputInContactModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputWithHintsAccountModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/InputWithHintsInContactModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/login.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/ContactsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/LoginTest.java" afterDir="false" />
+    <list default="true" id="62a0c1f2-df4f-4243-8052-e237f01f3921" name="Changes" comment="SalesForce-1: Added Provider, AfterMethod(Delete Account), ContactDetailsPage, AccountDetailsPage, AccountSteps, changed locator for inputsWithSuggestionsInContactModal">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/dto/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/dto/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/dto/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/dto/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/AccountsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/ContactsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewAccountModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewAccountModal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewContactModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/pages/NewContactModal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/providers/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/providers/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/steps/AccountSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/steps/AccountSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/utils/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/utils/PropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/ContactDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/teachmeskills/wrappers/ContactDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/teachmeskills/ContactsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/ContactsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/teachmeskills/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/teachmeskills/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,29 @@
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.ContactsTest.createContactsTest">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\TMS\SalesForce\src\main\java\by\teachmeskills\utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LoginTest.createAccountTest">
+    <configuration name="ContactsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SalesForce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.teachmeskills.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.teachmeskills" />
+      <option name="MAIN_CLASS_NAME" value="by.teachmeskills.ContactsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactsTest.createContactsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SalesForce" />
       <extension name="coverage">
@@ -83,6 +100,23 @@
       <option name="MAIN_CLASS_NAME" value="by.teachmeskills.ContactsTest" />
       <option name="METHOD_NAME" value="createContactsTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SalesForce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.teachmeskills.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.teachmeskills" />
+      <option name="MAIN_CLASS_NAME" value="by.teachmeskills.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -109,7 +143,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.createAccountTest" />
         <item itemvalue="TestNG.ContactsTest.createContactsTest" />
+        <item itemvalue="TestNG.ContactsTest" />
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.LoginTest.createAccountTest" />
       </list>
     </recent_temporary>
@@ -130,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658161303267</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SalesForce-1: Added NewContactModal, AfterMethod(delete), ContactsTest">
+      <created>1658396050431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658396050431</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SalesForce-1: Added Provider, AfterMethod(Delete Account), ContactDetailsPage, AccountDetailsPage, AccountSteps, changed locator for inputsWithSuggestionsInContactModal">
+      <created>1658762326931</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658762326931</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,7 +197,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="SalesForce-1: Added NewContactModal, AfterMethod(delete), ContactsTest" />
+    <MESSAGE value="SalesForce-1: Added Provider, AfterMethod(Delete Account), ContactDetailsPage, AccountDetailsPage, AccountSteps, changed locator for inputsWithSuggestionsInContactModal" />
+    <option name="LAST_COMMIT_MESSAGE" value="SalesForce-1: Added Provider, AfterMethod(Delete Account), ContactDetailsPage, AccountDetailsPage, AccountSteps, changed locator for inputsWithSuggestionsInContactModal" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/testng/testng/7.6.0/testng-7.6.0.jar!/org/testng/Assert.class</url>
+          <line>321</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

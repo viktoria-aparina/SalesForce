@@ -1,7 +1,9 @@
 package by.teachmeskills.pages;
 
 import by.teachmeskills.utils.PropertiesLoader;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,11 +12,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Properties;
 
+@Log4j2
 public class LoginPage extends BasePage {
 
-    public static final String USERNAME = "username";
-    public static final String PASSWORD = "password";
-    public static final String LOGIN_PROPERTIES = "login.properties";
+    private static final String USERNAME = "username";
+    private static final String PASSWORD = "password";
+    Properties properties = PropertiesLoader.loadProperties("config.properties");
 
     @FindBy(id = "username")
     private WebElement userNameInput;
@@ -30,25 +33,35 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Override
+    public boolean isPageOpened() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("Login"))));
+            return true;
+        } catch (TimeoutException exception) {
+            log.error("The page {} wasn't opened, because of {}", "Login Page", exception.getMessage());
+            return false;
+        }
+    }
+
+    @Override
     public LoginPage open() {
         driver.get("https://login.salesforce.com/");
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("Login"))));
         return this;
     }
 
     public LoginPage fillInUserName() {
-        Properties properties = PropertiesLoader.loadProperties(LOGIN_PROPERTIES);
         userNameInput.sendKeys(properties.getProperty(USERNAME));
         return this;
     }
 
     public LoginPage fillInPassword() {
-        Properties properties = PropertiesLoader.loadProperties(LOGIN_PROPERTIES);
         passwordInput.sendKeys(properties.getProperty(PASSWORD));
         return this;
     }
 
-    public void submitForm() {
+    public HomePage submitForm() {
         loginButton.submit();
+        return new HomePage(driver);
     }
 }
